@@ -19,7 +19,7 @@ jobs:
     - name: Build Docker image
       run: docker build -t ${{ secrets.DOCKER_USERNAME }}/portfolioproject:latest .
 
-    - name: Push to Docker Hub
+    - name: Push Docker Hub
       run: docker push ${{ secrets.DOCKER_USERNAME }}/portfolioproject:latest
 
     - name: Deploy on EC2 via SSH
